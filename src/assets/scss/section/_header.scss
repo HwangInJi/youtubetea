@@ -1,0 +1,125 @@
+.header__logo {
+    a {
+        display: flex;
+        padding: 11px 0;
+        margin: 10px;
+
+        em {
+            width: 40px;
+            height: 40px;
+            display: block;
+            background-color: red;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 1.6;
+
+            svg {
+                width: 32px;
+                height: 37px;
+            }
+        }
+
+        span {
+            font-size: 20px;
+            line-height: 1;
+            text-transform: uppercase;
+            font-weight: 900;
+
+            i {
+                font-weight: 100;
+            }
+        }
+    }
+}
+
+.header__menu {
+    .menu {
+        li {
+            margin: 10px;
+            background-color: #ffffff3b;
+            border-radius: 10px;
+            transition: all 0.3s;
+
+            a {
+                font-size: 1rem;
+                display: block;
+                padding: 0.3rem 0.9rem;
+
+                span {
+                    display: inline-block;
+                    vertical-align: 7px;
+                    margin-top: 10px;
+                    line-height: 1;
+                }
+
+                svg {
+                    margin-right: 20px;
+                    margin-bottom: 5px;
+                }
+            }
+
+            &:hover {
+                background-color: #f3f2eb;
+                color: #000;
+            }
+        }
+    }
+
+    .keyword {
+        padding: 10px;
+
+        li {
+            display: inline-block;
+
+            a {
+                display: inline-block;
+                font-size: 0.8rem;
+                padding: 5px 15px;
+                border: 1px solid #f3f2eb;
+                border-radius: 40px;
+                margin: 3px 3px;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: #f3f2eb;
+                    color: #000;
+                }
+            }
+
+            &.active a {
+                background-color: var(--black100);
+                color: var(--white);
+            }
+        }
+    }
+
+}
+
+.header__sns {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 260px;
+    text-align: center;
+    padding: 15px 0 10px;
+    background-color: var(--blackAlpha100);
+    backdrop-filter: blur(10px);
+
+    li {
+        display: inline-block;
+
+        a {
+            padding: 5px 7px;
+            display: inline-block;
+        }
+    }
+}
+
+@media (max-width:960px) {
+    .header__logo {
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+}
