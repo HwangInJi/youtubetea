@@ -1,3 +1,4 @@
+// 비디오 페이지
 .video__inner {
     display: grid;
     grid-template-columns: repeat(4, 24%);
@@ -19,18 +20,6 @@
     }
 
     .video {
-        a {
-            img {
-                padding-bottom: 10px;
-            }
-        }
-    }
-}
-
-.video__inner.search {
-    padding: 40px;
-
-    .video {
         .video__thumb {
             a {
                 display: block;
@@ -42,14 +31,14 @@
         }
 
         .video__info {
-            background-color: #6e6565;
+            background-color: #222;
             padding: 1rem;
 
             .title {
                 @include line-two;
                 min-height: 48px;
 
-                @media (max-width:800px) {
+                @media (max-width: 800px) {
                     min-height: 40px;
                 }
             }
@@ -59,17 +48,19 @@
                     background-color: #fff;
                     border-radius: 20px;
                     color: #222;
+                    font-size: 12px;
                     padding: 1px 10px;
                     text-transform: uppercase;
                     margin-top: 10px;
                     display: inline-block;
                 }
+
             }
         }
     }
 }
 
-// 메인 페이지에 있는 비디오 슬라이드
+// 메인 페이지 비디오 슬라이드
 .video__slider {
     .video {
         .video__thumb {
@@ -84,43 +75,4 @@
             -webkit-box-orient: vertical;
         }
     }
-}
-
-// 비디오 상세 페이지 
-.video__info {
-    padding: 2rem;
-
-    .title {
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
-    }
-
-    .channel {
-        display: flex;
-        justify-content: space-between;
-        background-color: #111;
-        padding: 1rem 2rem;
-        border-radius: 40px;
-
-        span {
-            margin-left: 10px;
-
-            svg {
-                width: 20px;
-                height: 20px;
-                vertical-align: -5px;
-                margin-right: 5px;
-            }
-        }
-
-        .channelTitle {
-            font-size: 1rem;
-            font-weight: bold;
-        }
-    }
-}
-
-.video__desc {
-    padding: 2rem;
-    white-space: pre-line;
 }

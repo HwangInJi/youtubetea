@@ -69,20 +69,24 @@ export const headerMenus = [
 
 export const searchKeyword = [
     {
-        title: "제주도",
+        title: "제주도Tea",
         src: "/search/제주도"
     },
     {
-        title: "국산차",
+        title: "국산Tea",
         src: "/search/국산차"
     },
     {
-        title: "수입차",
+        title: "수입Tea",
         src: "/search/수입차"
     },
     {
         title: "카페인",
         src: "/search/카페인"
+    },
+    {
+        title: "디카페인",
+        src: "/search/디카페인"
     }
 ]
 
