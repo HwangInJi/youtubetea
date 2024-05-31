@@ -6,7 +6,9 @@ const Home = () => {
         <Main
             title="유튜브 홈"
             description="유튜브 채널 홈입니다."
-        >Home</Main>
+        >
+
+        </Main>
     )
 }
 

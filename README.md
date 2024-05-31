@@ -51,6 +51,9 @@ npm install react-router-dom, axios, react-icons, react-player, sass, react-helm
 ## 사용 스택
 - node.js 설치
 
+## 서버에 올리는 방법
+- 터미널에 `npm run build` 입력
+
 ## 트러블 슈팅
 1. npx create-react-app . 실행 후 에러 발생 시
 -> 만약 경로 설정 관련 에러가 발생한다면, 해당 경로에 들어가 폴더에 npm 초기화 폴더를 만들어준 후 다시 npx create-react-app .을 입력하고 'y'를 눌러줍니다.
