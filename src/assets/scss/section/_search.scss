@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     height: 84px;
-    padding: 17px 40px;
+    padding: 17px 30px;
     border-bottom: 1px solid var(--white);
     background-color: #2423233b;
     backdrop-filter: blur(10px);
@@ -12,7 +12,7 @@
         height: 24px;
         background-image: url(../../img/icon/search.svg);
         position: absolute;
-        left: 50px;
+        left: 45px;
         top: 29px;
         background-size: cover;
     }
@@ -22,6 +22,17 @@
         border-bottom: 1px solid var(--white200);
         padding: 15px 45px;
         border-radius: 3px;
+    }
+}
+
+.search__more {
+    padding: 2rem 0;
+
+    button {
+        background-color: #3a3939;
+        padding: 10px 20px;
+        border-radius: 30px;
+        color: var(--white);
     }
 }
 
