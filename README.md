@@ -58,4 +58,5 @@ npm install react-router-dom, axios, react-icons, react-player, sass, react-helm
 2. 다른 사람의 소스를 가져올 경우
 -> 새로운 임의의 파일을 하나 만든 후 git clone 해주기
 -> 노드 모듈은 없기 때문에 해당 cd를 통해 해당 폴더에 들어간 후
--> `npm i`로 인스톨 해주기 
+-> `npm i`로 인스톨 해주기
+-> 그래도 안된다면 버전이 맞는지 확인(버전이 다를 경우 충돌)
