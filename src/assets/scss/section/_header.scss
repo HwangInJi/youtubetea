@@ -3,12 +3,13 @@
         display: flex;
         padding: 11px 0;
         margin: 10px;
+        color: #2b5b29;
 
         em {
             width: 40px;
             height: 40px;
             display: block;
-            background-color: red;
+            background-color: #fffcf2;
             margin-right: 10px;
             text-align: center;
             line-height: 1.6;
@@ -50,11 +51,13 @@
                     vertical-align: 7px;
                     margin-top: 10px;
                     line-height: 1;
+                    color: #c76892;
                 }
 
                 svg {
                     margin-right: 20px;
                     margin-bottom: 5px;
+                    color: #a2d1a0;
                 }
             }
 
