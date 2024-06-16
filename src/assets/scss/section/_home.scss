@@ -1,19 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
 #homePage {
-    background-color: #fffdf5; // 부드러운 배경색
-    height: 100%;
-    padding: 0 2rem; // 여백 추가
-    margin-top: 1rem;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-left: 260px;
+    background-color: #fffcf2;
+    position: relative;
+
+    .home__banner {
+        position: relative; // 검색 바를 배너 위에 배치하기 위해 상대 위치 지정
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; // 배너와 콘텐츠 사이에 여백 추가
+
+        .banner-img {
+            max-width: 90%;
+            height: 50vh;
+            border-radius: 10px; // 둥근 모서리 추가
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // 그림자 효과
+        }
+    }
 
     .home__content {
+        width: 97%;
         display: flex;
-        align-items: center; // 중앙 정렬
+        align-items: center;
         padding: 20px;
-        border: 1px solid #ccc; // 보더 선 추가
-        border-radius: 10px; // 보더 선 둥글게
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin: 0 auto;
 
         .home__video-container {
-            width: 200%;
-            height: 400px; // 비디오 높이 조정
+            width: 80%;
+            height: 57vh;
             margin-right: 20px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -24,31 +45,44 @@
             iframe {
                 width: 100%;
                 height: 100%;
-                border-radius: 10px;
             }
         }
 
         .home__description {
-            width: 50%;
+            width: 20%;
             height: 57vh;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 0px;
+            border-radius: 10px; // 둥근 보더로 변경
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
+            display: flex;
+            flex-direction: column; // 수직 정렬
+            justify-content: space-between; // 공간을 균등하게 배분
 
             h1 {
                 font-size: 2rem;
                 color: #333;
                 margin-bottom: 10px;
                 font-weight: bold; // 볼드 텍스트
-                font-family: 'Arial', sans-serif; // 폰트 설정
+                font-family: 'Fredericka the Great', serif;
             }
 
             p {
                 font-size: 1rem;
                 color: #666;
                 padding-top: 2rem;
+                line-height: 1.6; // 줄 간격 설정
+            }
+
+            .main-img {
+                align-self: center; // 중앙 정렬
+                margin-top: 20px;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%; // 원형으로 만들기
+                object-fit: cover; // 이미지가 원형에 맞추어지도록 설정
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // 그림자 효과
             }
         }
     }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Main from '../components/section/Main';
 import Loading from '../components/section/Loading';
+import main03 from '../assets/img/main03.jpg';
+import bannerImage from '../assets/img/DALL·E 2024-06-17 02.03.58 - A cute and playful banner design featuring a friendly cartoon dog with a checkered background and speech bubbles around it. The background color is li.webp'; // 배너 이미지 파일 import
 import '../assets/scss/section/_home.scss'; // SCSS 파일 import
 
 const Home = () => {
@@ -30,14 +31,14 @@ const Home = () => {
     }, []);
 
     return (
-        <Main
-            title="홈"
-            description="홈 페이지입니다. - 추천 이미지: Tea"
-        >
+        <>
             {loading ? (
                 <Loading />
             ) : (
                 <section id='homePage' className='fade-in'>
+                    <div className="home__banner">
+                        <img src={bannerImage} alt="Banner" className="banner-img" />
+                    </div>
                     <div className="home__content">
                         <div className="home__video-container">
                             {videoUrl ? (
@@ -57,15 +58,16 @@ const Home = () => {
                         <div className="home__description">
                             <h1>WELCOME</h1>
                             <p>
-                                이 웹사이트는 차에 대한 정보를 제공하며, 유튜브에서 차 관련 콘텐츠를 검색할 수 있습니다.<br/>
-                                여기서는 다양한 차 종류, 차의 역사, 차를 만드는 방법, 차의 효능과 건강에 미치는 긍정적인 영향에 대해 알아볼 수 있으며,<br/>
+                                이 웹사이트는 차에 대한 정보를 제공하며, 유튜브에서 차 관련 콘텐츠를 검색할 수 있습니다.<br /><br />
+                                여기서는 다양한 차 종류, 차의 역사, 차를 만드는 방법, 차의 효능과 건강에 미치는 긍정적인 영향에 대해 알아볼 수 있으며,<br /><br />
                                 세계 각국의 차를 비교하고 추천하는 콘텐츠도 만나볼 수 있습니다.
                             </p>
+                            <img src={main03} alt="Main" className="main-img" />
                         </div>
                     </div>
                 </section>
             )}
-        </Main>
+        </>
     );
 }
 

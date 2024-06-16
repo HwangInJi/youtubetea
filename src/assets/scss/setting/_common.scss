@@ -5,7 +5,7 @@ body {
 
 #searchPage {
     padding: 2rem;
-    background-color: #a2d1a0;
+    background-color: #fffcf2;
 
     h2 {
         margin-bottom: 0.5rem;
@@ -20,11 +20,11 @@ body {
             &::before {
                 content: "";
                 width: 115%;
-                height: 26px;
-                background-color: #ffffff70;
+                height: 12px;
+                background-color: #a2d1a080;
                 position: absolute;
                 left: -5px;
-                top: -2px;
+                top: 12px;
                 z-index: -1;
                 border-radius: 10px;
             }
