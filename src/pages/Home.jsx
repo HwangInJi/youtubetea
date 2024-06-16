@@ -1,40 +1,33 @@
 import React, { useEffect, useState } from 'react';
-import Slider from 'react-slick';
 import Main from '../components/section/Main';
 import Loading from '../components/section/Loading';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import '../assets/scss/section/_home.scss'; // SCSS 파일 import
-
-// 로컬 이미지를 import 합니다.
-import img1 from '../assets/img/main01.jpg';
-import img2 from '../assets/img/main02.jpg';
-import img3 from '../assets/img/main03.jpg';
-import img4 from '../assets/img/main04.jpg';
-import img5 from '../assets/img/main05.jpg';
 
 const Home = () => {
     const [loading, setLoading] = useState(true);
-    const images = [img1, img2, img3, img4, img5];
+    const [videoUrl, setVideoUrl] = useState('');
 
-    // 로딩 시간 1초 설정
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 1000);
+        const fetchVideos = async () => {
+            try {
+                const keyword = 'Tea추천'; // 검색 키워드
+                const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY; // .env 파일에 저장된 유튜브 API 키
+                const response = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${keyword}&type=video&maxResults=48&key=${apiKey}`);
+                const data = await response.json();
+                const videos = data.items.filter(item => item.id.videoId); // videoId가 있는 항목만 필터링
+                if (videos.length > 0) {
+                    const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+                    setVideoUrl(`https://www.youtube.com/embed/${randomVideo.id.videoId}`);
+                }
+            } catch (error) {
+                console.error('비디오를 가져오는 중 오류가 발생했습니다.', error);
+            } finally {
+                setLoading(false);
+            }
+        };
 
-        return () => clearTimeout(timer); // 타이머 정리
+        fetchVideos();
     }, []);
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-    };
 
     return (
         <Main
@@ -45,25 +38,26 @@ const Home = () => {
                 <Loading />
             ) : (
                 <section id='homePage' className='fade-in'>
-                    <div className="home__title">
-                        <h1>안녕하세요. Teast Tea입니다.</h1>
-                    </div>
-                    <div className="home__slider">
-                        <Slider {...settings}>
-                            {images.map((image, index) => (
-                                <div key={index} className="slick-slide">
-                                    <img src={image} alt={`slide-${index}`} />
-                                </div>
-                            ))}
-                        </Slider>
-                    </div>
-                    <div className="home__description">
-                        <h2>소개</h2>
-                        <p>
-                            이 사이트는 차에 대한 모든 것을 다룹니다.
-                            다양한 차 종류와 그에 관련된 영상을 통해 차에 대한 지식을 넓히고,
-                            새로운 차 문화를 알아보세요!
-                        </p>
+                    <div className="home__content">
+                        <div className="home__video-container">
+                            {videoUrl ? (
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src={videoUrl}
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    title="Random Tea Video"
+                                ></iframe>
+                            ) : (
+                                <p>비디오를 불러오는 중 오류가 발생했습니다.</p>
+                            )}
+                        </div>
+                        <div className="home__description">
+                            <h1>WELCOME</h1>
+                            <p>이 웹사이트는 차에 대한 정보를 제공하며, 유튜브에서 차 관련 콘텐츠를 검색할 수 있습니다.</p>
+                        </div>
                     </div>
                 </section>
             )}
