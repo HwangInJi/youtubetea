@@ -10,6 +10,7 @@
 
     .home__banner {
         position: relative;
+        margin: 0 auto;
         width: 100%;
         justify-content: center;
         margin-bottom: 20px;
@@ -17,6 +18,8 @@
         .banner-img {
             max-width: 97%;
             height: 100%;
+            margin: 0 auto;
+            display: block;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -24,7 +27,7 @@
         .search-container {
             position: absolute;
             top: 79.5%;
-            left: 48.3%;
+            left: 50%;
             transform: translate(-50%, -50%);
             width: 75%;
             display: flex;
