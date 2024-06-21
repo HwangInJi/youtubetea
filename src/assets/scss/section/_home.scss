@@ -9,17 +9,60 @@
     position: relative;
 
     .home__banner {
-        position: relative; // 검색 바를 배너 위에 배치하기 위해 상대 위치 지정
+        position: relative;
         width: 100%;
-        display: flex;
         justify-content: center;
-        margin-bottom: 20px; // 배너와 콘텐츠 사이에 여백 추가
+        margin-bottom: 20px;
 
         .banner-img {
-            max-width: 90%;
-            height: 50vh;
-            border-radius: 10px; // 둥근 모서리 추가
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // 그림자 효과
+            max-width: 97%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-container {
+            position: absolute;
+            top: 79.5%;
+            left: 48.3%;
+            transform: translate(-50%, -50%);
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home-search {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; // 배너 이미지 위에 고정
+
+            .search__inner {
+                background-color: transparent; // 배경색 제거
+                padding: 0; // 패딩 제거
+                border-radius: 0; // 둥근 모서리 제거
+                box-shadow: none; // 그림자 제거
+            }
+
+            .search__input {
+                width: 100%;
+                padding: 0;
+                border: none;
+                background: none;
+                font-size: 20px;
+                color: #333;
+                font-family: var(--fontN);
+                line-height: 4;
+                padding-left: 1rem;
+            }
+
+            .search__input::placeholder {
+                color: #333; // 플레이스홀더 텍스트 색상
+                opacity: 1; // 플레이스홀더 투명도
+            }
         }
     }
 
@@ -53,18 +96,18 @@
             height: 57vh;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px; // 둥근 보더로 변경
+            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
             display: flex;
-            flex-direction: column; // 수직 정렬
-            justify-content: space-between; // 공간을 균등하게 배분
+            flex-direction: column;
+            justify-content: space-between;
 
             h1 {
                 font-size: 2rem;
                 color: #333;
                 margin-bottom: 10px;
-                font-weight: bold; // 볼드 텍스트
+                font-weight: bold;
                 font-family: 'Fredericka the Great', serif;
             }
 
@@ -72,17 +115,17 @@
                 font-size: 1rem;
                 color: #666;
                 padding-top: 2rem;
-                line-height: 1.6; // 줄 간격 설정
+                line-height: 1.6;
             }
 
             .main-img {
-                align-self: center; // 중앙 정렬
+                align-self: center;
                 margin-top: 20px;
                 width: 200px;
                 height: 200px;
-                border-radius: 50%; // 원형으로 만들기
-                object-fit: cover; // 이미지가 원형에 맞추어지도록 설정
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // 그림자 효과
+                border-radius: 50%;
+                object-fit: cover;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             }
         }
     }

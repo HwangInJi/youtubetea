@@ -3,6 +3,7 @@ import Loading from '../components/section/Loading';
 import main03 from '../assets/img/main03.jpg';
 import bannerImage from '../assets/img/DALL·E 2024-06-17 02.03.58 - A cute and playful banner design featuring a friendly cartoon dog with a checkered background and speech bubbles around it. The background color is li.webp'; // 배너 이미지 파일 import
 import '../assets/scss/section/_home.scss'; // SCSS 파일 import
+import Search from '../components/section/Search'; // Search 컴포넌트 import
 
 const Home = () => {
     const [loading, setLoading] = useState(true);
@@ -38,6 +39,9 @@ const Home = () => {
                 <section id='homePage' className='fade-in'>
                     <div className="home__banner">
                         <img src={bannerImage} alt="Banner" className="banner-img" />
+                        <div className="search-container">
+                            <Search className="home-search" /> {/* Search 컴포넌트에 클래스 추가 */}
+                        </div>
                     </div>
                     <div className="home__content">
                         <div className="home__video-container">
