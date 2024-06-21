@@ -25,6 +25,7 @@
 .channel__info {
     margin-top: 100px;
     text-align: center;
+    color: #000;
 
     .title {
         margin-bottom: 10px;
@@ -39,7 +40,8 @@
         margin-top: 30px;
 
         span {
-            background-color: #3a3939;
+            background-color: #a2d1a0;
+            color: #fffcf2;
             padding: 10px 20px;
             border-radius: 30px;
             margin: 4px;
@@ -60,12 +62,17 @@
 }
 
 .channel__more {
-    padding: 2rem;
+    padding: 2rem 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
     button {
-        background-color: #3a3939;
-        padding: 10px 20px;
+        background-color: #2b5b29;
+        padding: 15px 54px;
         border-radius: 30px;
-        color: var(--white);
-    }
+        color: #fffcf2;
+        font-weight: 800;
+        font-size: 1.5vw;
+        }
 }
