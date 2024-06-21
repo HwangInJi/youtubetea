@@ -41,13 +41,13 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 1; // 배너 이미지 위에 고정
+            z-index: 1;
 
             .search__inner {
-                background-color: transparent; // 배경색 제거
-                padding: 0; // 패딩 제거
-                border-radius: 0; // 둥근 모서리 제거
-                box-shadow: none; // 그림자 제거
+                background-color: transparent;
+                padding: 0;
+                border-radius: 0;
+                box-shadow: none;
             }
 
             .search__input {
@@ -63,8 +63,8 @@
             }
 
             .search__input::placeholder {
-                color: #333; // 플레이스홀더 텍스트 색상
-                opacity: 1; // 플레이스홀더 투명도
+                color: #333;
+                opacity: 1;
             }
         }
     }
@@ -129,6 +129,154 @@
                 border-radius: 50%;
                 object-fit: cover;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        padding-left: 0;
+
+        .home__banner {
+            .search-container {
+                width: 85%;
+            }
+        }
+
+        .home__content {
+            flex-direction: column;
+            padding: 10px;
+
+            .home__video-container {
+                display: none; // 1200px 이하에서는 동영상 숨기기
+            }
+
+            .home__description {
+                width: 100%;
+                height: auto;
+
+                h1 {
+                    font-size: 1.75rem;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                }
+
+                .main-img {
+                    width: 180px;
+                    height: 180px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        padding-left: 0;
+
+        .home__banner {
+            .search-container {
+                width: 90%;
+            }
+        }
+
+        .home__content {
+            flex-direction: column;
+            padding: 10px;
+
+            .home__video-container {
+                display: none; // 800px 이하에서도 동영상 숨기기
+            }
+
+            .home__description {
+                width: 100%;
+                height: auto;
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                }
+
+                .main-img {
+                    width: 160px;
+                    height: 160px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding-left: 0;
+
+        .home__banner {
+            .search-container {
+                width: 95%;
+            }
+        }
+
+        .home__content {
+            flex-direction: column;
+            padding: 10px;
+
+            .home__video-container {
+                display: none; // 600px 이하에서도 동영상 숨기기
+            }
+
+            .home__description {
+                width: 100%;
+                height: auto;
+
+                h1 {
+                    font-size: 1.25rem;
+                }
+
+                p {
+                    font-size: 0.75rem;
+                }
+
+                .main-img {
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 300px) {
+        padding-left: 0;
+
+        .home__banner {
+            .search-container {
+                width: 100%;
+            }
+        }
+
+        .home__content {
+            flex-direction: column;
+            padding: 10px;
+
+            .home__video-container {
+                display: none; // 300px 이하에서도 동영상 숨기기
+            }
+
+            .home__description {
+                width: 100%;
+                height: auto;
+
+                h1 {
+                    font-size: 1rem;
+                }
+
+                p {
+                    font-size: 0.7rem;
+                }
+
+                .main-img {
+                    width: 120px;
+                    height: 120px;
+                }
             }
         }
     }
