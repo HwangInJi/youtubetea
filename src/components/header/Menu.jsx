@@ -1,6 +1,6 @@
-import React from 'react'
-import { headerMenus, searchKeyword } from '../../data/menu'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { headerMenus, searchKeyword } from '../../data/menu';
+import ScrollToTopLink from '../section/ScrollToTopLink'; // ScrollToTopLink 컴포넌트를 가져옵니다.
 
 const Menu = () => {
     return (
@@ -8,23 +8,23 @@ const Menu = () => {
             <ul className='menu'>
                 {headerMenus.map((menu, key) => (
                     <li key={key}>
-                        <Link to={menu.src}>
+                        <ScrollToTopLink to={menu.src}>
                             {menu.icon}<span>{menu.title}</span>
-                        </Link>
+                        </ScrollToTopLink>
                     </li>
                 ))}
             </ul>
             <ul className='keyword'>
                 {searchKeyword.map((keyword, key) => (
                     <li key={key}>
-                        <Link to={keyword.src}>
+                        <ScrollToTopLink to={keyword.src}>
                             {keyword.icon}<span>{keyword.title}</span>
-                        </Link>
+                        </ScrollToTopLink>
                     </li>
                 ))}
             </ul>
         </nav>
-    )
-}
+    );
+};
 
-export default Menu
+export default Menu;
